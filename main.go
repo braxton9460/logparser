@@ -131,8 +131,6 @@ func PrintStats(w http.ResponseWriter, r *http.Request) {
   }
   w.Write([]byte(b.String()))
 }
-  w.Write([]byte(b.String()))
-}
 
 func WebListener() {
   http.HandleFunc(WebEndpoint, PrintStats)
@@ -174,8 +172,6 @@ func main() {
 //  Stats["registrationapi"][200]["GET"][CounterTts] = 2
 //  fmt.Println(Stats["registrationapi"][200]["GET"][CounterTts])
 //  fmt.Printf("%+v\n", Stats)
-  // Get the first arg
-  log_file := os.Args[1]
   // Get the first arg
   log_file := os.Args[1]
   seek := &tail.SeekInfo{
